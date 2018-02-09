@@ -1,0 +1,15 @@
+Codes: C - connected, S - static, R - RIP, B - BGP, (>) - Diversion path
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type
+
+Gateway of last resort is not set
+
+C    10.11.13.0/24 is directly connected, 3d05h, MgmtEth0/0/CPU0/0
+L    10.11.13.4/32 is directly connected, 3d05h, MgmtEth0/0/CPU0/0
+S    10.16.0.0/16 [1/0] via 198.18.1.1, 3d05h
+i L2 11.11.1.0/24 [115/10] via 58.0.0.21, 2d10h, GigabitEthernet0/0/0/0
+S    11.11.2.0/24 is directly connected, 3d05h, Null0
+i L2 11.11.3.0/24 [115/20] via 58.0.0.21, 2d10h, GigabitEthernet0/0/0/0
+                  [115/20] via 49.0.0.30, 2d10h, GigabitEthernet0/0/0/2
+i L2 11.11.4.0/24 [115/30] via 49.0.0.30, 2d10h, GigabitEthernet0/0/0/2
+i L2 11.11.5.0/24 [115/10] via 48.0.0.27, 3d05h, GigabitEthernet0/0/0/1
