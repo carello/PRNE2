@@ -1,7 +1,3 @@
-
-# Dont' forget to export your PYTHONPATH since main in now in a sub-directory 'lab'
-# example: export PYTHONPATH=~/Desktop/PRNE/section14/14-3:$PYTHONPATH
-
 from util.readdevs import read_device
 from util.printdev import print_device_info
 

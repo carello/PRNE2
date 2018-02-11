@@ -1,14 +1,17 @@
-
-# Dont' forget to export your PYTHONPATH since main in now in a sub-directory 'lab'
-# example: export PYTHONPATH=~/Desktop/PRNE/section14/14-3:$PYTHONPATH
-
 from util.readdevs import read_device
 from util.printdev import print_device_info
+from util.writedev import write_devices_info
 
 if __name__ == '__main__':
-    devices_list = read_device('device.txt')
+    devices_list = read_device('devices.json')
     print()
     for device in devices_list:
         device.connect()
         device.get_interfaces()
+
+        # Seem ot have a threading problem, only can do one of these lines at a time
+        write_devices_info('json-devices-out', devices_list)
         print_device_info(device)
+
+
+
