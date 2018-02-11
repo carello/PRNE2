@@ -1,0 +1,3 @@
+[
+  {"name": "n9k-lab", "os": "ios", "ip": "some_IP", "user": "some_USER", "password": "some_PASSWORD", "key": "sshkey"}
+]
