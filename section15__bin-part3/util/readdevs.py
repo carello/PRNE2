@@ -15,13 +15,16 @@ def read_device(devices_file):
             if d['os'] == 'ios':
                 device2 = NetworkDeviceIOS(d['name'], d['ip'], d['user'], d['password'])
 
-            elif device_info['os'] == 'ios-xr':
+            elif d['os'] == 'ios-xr':
 
                 device2 = NetworkDeviceXR(d['name'], d['ip'], d['user'], d['password'])
 
             else:
                 device2 = NetworkDevice(d['name'], d['ip'], d['user'], d['password'])
 
+            # After reading the file, pass the binary data object to the device object.
+            # The device object will need to implement a method such as 'set_sshkey'
+            # which is passed the binary data object you have just read.
             key_file_path = 'sshkeys/'+d['key']
             key_file = open(key_file_path, 'rb')
             key_data = key_file.read()
